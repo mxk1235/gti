@@ -1,5 +1,5 @@
 /*
- * gti - a git launcher
+ * memesql - a memsql launcher
  *
  * Copyright 2012 by Richard Wossal <richard@r-wos.org>
  *
@@ -56,7 +56,7 @@ HANDLE WIN_CONSOLE;
 #    include <sys/termios.h>
 #endif
 
-#define GIT_NAME "git"
+#define GIT_NAME "memsql"
 
 #ifndef GTI_SPEED
 #    define GTI_SPEED 1000
@@ -104,7 +104,7 @@ int main(int argc, char **argv)
     move_to_top();
     fflush(TERM_FH);
 
-    git_path = getenv("GIT");
+    git_path = getenv("MEMSQL");
     if (git_path) {
         execv(git_path, argv);
     } else {
